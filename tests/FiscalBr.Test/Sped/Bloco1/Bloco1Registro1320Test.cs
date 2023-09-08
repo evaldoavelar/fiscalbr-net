@@ -9,8 +9,9 @@ namespace FiscalBr.Test.Sped.Bloco1
 {
     public class Bloco1Registro1320Test
     {
-        [Fact]
-        public void Ler_Registro_1320_EFDFiscal()
+        [Theory]
+        [InlineData("pt-BR")]
+        public void Ler_Registro_1320_EFDFiscal(string currentCulture)
         {
             string linha = "|1320|1|1234567890|Motivo 1|Interventor 1|51077662000109|00695196090|100,13|55,20|10|40|";
              
@@ -23,10 +24,10 @@ namespace FiscalBr.Test.Sped.Bloco1
             Assert.Equal("Interventor 1", registro.NomInterv);
             Assert.Equal("51077662000109", registro.CnpjInterv);
             Assert.Equal("00695196090", registro.CpfInterv);
-            Assert.Equal((decimal)100.13, registro.ValFecha);
-            Assert.Equal((decimal)55.20, registro.ValAbert);
-            Assert.Equal(10, registro.VolAferi);
-            Assert.Equal(40, registro.VolVendas); 
+            Assert.Equal(100.13M, registro.ValFecha);
+            Assert.Equal(55.20M, registro.ValAbert);
+            Assert.Equal(10M, registro.VolAferi);
+            Assert.Equal(40M, registro.VolVendas); 
         }        
     }
 }

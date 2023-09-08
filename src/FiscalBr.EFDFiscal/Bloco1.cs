@@ -703,13 +703,13 @@ namespace FiscalBr.EFDFiscal
             /// <summary>
             ///     Bico ligado à bomba
             /// </summary>
-            [SpedCampos(2, "NUM_BICO", "N", 0, 0, true, 2)]
+            [SpedCampos(2, "NUM_BICO", "N", int.MaxValue, 0, true, 2)]
             public long NumBico { get; set; }
 
             /// <summary>
             ///     Número da intervenção
             /// </summary>
-            [SpedCampos(3, "NR_INTERV", "N", 0, 0, false, 2)]
+            [SpedCampos(3, "NR_INTERV", "N", int.MaxValue, 0, false, 2)]
             public long? NrInterv { get; set; }
 
             /// <summary>
@@ -739,25 +739,25 @@ namespace FiscalBr.EFDFiscal
             /// <summary>
             ///     Valor da leitura final do contador, no fechamento do bico
             /// </summary>
-            [SpedCampos(8, "VAL_FECHA", "N", 0, 3, true, 2)]
+            [SpedCampos(8, "VAL_FECHA", "N", int.MaxValue, 3, true, 2)]
             public decimal ValFecha { get; set; }
 
             /// <summary>
             ///     Valor da leitura inicial do contador, na abertura do bico
             /// </summary>
-            [SpedCampos(9, "VAL_ABERT", "N", 0, 3, true, 2)]
+            [SpedCampos(9, "VAL_ABERT", "N", int.MaxValue, 3, true, 2)]
             public decimal ValAbert { get; set; }
 
             /// <summary>
             ///     Aferições da bomba (em litros)
             /// </summary>
-            [SpedCampos(10, "VOL_AFERI", "N", 0, 3, false, 2)]
+            [SpedCampos(10, "VOL_AFERI", "N", int.MaxValue, 3, false, 2)]
             public decimal VolAferi { get; set; }
 
             /// <summary>
             ///     Vendas do bico (em litros)
             /// </summary>
-            [SpedCampos(11, "VOL_VENDAS", "N", 0, 3, true, 2)]
+            [SpedCampos(11, "VOL_VENDAS", "N", int.MaxValue, 3, true, 2)]
             public decimal VolVendas { get; set; }
         }
 
@@ -904,91 +904,91 @@ namespace FiscalBr.EFDFiscal
             /// <summary>
             ///     Quantidade de cana esmagada (toneladas)
             /// </summary>
-            [SpedCampos(3, "QTD_MOID", "N", 0, 2, false, 6)]
-            public double? QtdMoid { get; set; }
+            [SpedCampos(3, "QTD_MOID", "N", int.MaxValue, 2, false, 6)]
+            public decimal? QtdMoid { get; set; }
 
             /// <summary>
             ///     Estoque inicial (litros / Kg)
             /// </summary>
-            [SpedCampos(4, "ESTQ_INI", "N", 0, 2, true, 6)]
-            public double EstqIni { get; set; }
+            [SpedCampos(4, "ESTQ_INI", "N", int.MaxValue, 2, true, 6)]
+            public decimal EstqIni { get; set; }
 
             /// <summary>
             ///     Quantidade produziada (litros / Kg)
             /// </summary>
-            [SpedCampos(5, "QTD_PRODUZ", "N", 0, 2, false, 6)]
-            public double? QtdProduz { get; set; }
+            [SpedCampos(5, "QTD_PRODUZ", "N", int.MaxValue, 2, false, 6)]
+            public decimal? QtdProduz { get; set; }
 
             /// <summary>
             ///     Entrada de álcool anidro/hidratado decorrente da transformação do álcool hidratado/anidro
             /// </summary>
-            [SpedCampos(6, "ENT_ANID_HID", "N", 0, 2, false, 6)]
-            public double? EntAnidHid { get; set; }
+            [SpedCampos(6, "ENT_ANID_HID", "N", int.MaxValue, 2, false, 6)]
+            public decimal? EntAnidHid { get; set; }
 
             /// <summary>
             ///     Outras entradas (litros / Kg)
             /// </summary>
-            [SpedCampos(7, "OUTR_ENTR", "N", 0, 2, false, 6)]
-            public double? OutrEntr { get; set; }
+            [SpedCampos(7, "OUTR_ENTR", "N", int.MaxValue, 2, false, 6)]
+            public decimal? OutrEntr { get; set; }
 
             /// <summary>
             ///     Evaporação (litros) ou quebra de peso (Kg)
             /// </summary>
-            [SpedCampos(8, "PERDA", "N", 0, 2, false, 6)]
-            public double? Perda { get; set; }
+            [SpedCampos(8, "PERDA", "N", int.MaxValue, 2, false, 6)]
+            public decimal? Perda { get; set; }
 
             /// <summary>
             ///     Consumo (litros)
             /// </summary>
-            [SpedCampos(9, "CONS", "N", 0, 2, false, 6)]
-            public double? Cons { get; set; }
+            [SpedCampos(9, "CONS", "N", int.MaxValue, 2, false, 6)]
+            public decimal? Cons { get; set; }
 
             /// <summary>
             ///     Saída para transformação (litros)
             /// </summary>
-            [SpedCampos(10, "SAI_ANI_HID", "N", 0, 2, false, 6)]
-            public double? SaiAniHid { get; set; }
+            [SpedCampos(10, "SAI_ANI_HID", "N", int.MaxValue, 2, false, 6)]
+            public decimal? SaiAniHid { get; set; }
 
             /// <summary>
             ///     Saídas (litros / Kg)
             /// </summary>
-            [SpedCampos(11, "SAIDAS", "N", 0, 2, false, 6)]
-            public double? Saidas { get; set; }
+            [SpedCampos(11, "SAIDAS", "N", int.MaxValue, 2, false, 6)]
+            public decimal? Saidas { get; set; }
 
             /// <summary>
             ///     Estoque final (litros / Kg)
             /// </summary>
-            [SpedCampos(12, "ESTQ_FIN", "N", 0, 2, true, 6)]
-            public double EstqFin { get; set; }
+            [SpedCampos(12, "ESTQ_FIN", "N", int.MaxValue, 2, true, 6)]
+            public decimal EstqFin { get; set; }
 
             /// <summary>
             ///     Estoque inicial de mel residual (Kg)
             /// </summary>
-            [SpedCampos(13, "ESTQ_INI_MEL", "N", 0, 2, false, 6)]
-            public double? EstqIniMel { get; set; }
+            [SpedCampos(13, "ESTQ_INI_MEL", "N", int.MaxValue, 2, false, 6)]
+            public decimal? EstqIniMel { get; set; }
 
             /// <summary>
             ///     Produção de mel residual (Kg) e entradas de mel (Kg)
             /// </summary>
-            [SpedCampos(14, "PROD_DIA_MEL", "N", 0, 2, false, 6)]
-            public double? ProdDiaMel { get; set; }
+            [SpedCampos(14, "PROD_DIA_MEL", "N", int.MaxValue, 2, false, 6)]
+            public decimal? ProdDiaMel { get; set; }
 
             /// <summary>
             ///     Mel residual utilizado (Kg) e saídas de mel (Kg)
             /// </summary>
-            [SpedCampos(15, "UTIL_MEL", "N", 0, 2, false, 6)]
-            public double? UtilMel { get; set; }
+            [SpedCampos(15, "UTIL_MEL", "N", int.MaxValue, 2, false, 6)]
+            public decimal? UtilMel { get; set; }
 
             /// <summary>
             ///     Produção de álcool (litros) ou açúcar (Kg) proveniente do mel residual
             /// </summary>
-            [SpedCampos(16, "PROD_ALC_MEL", "N", 0, 2, false, 6)]
-            public double? ProdAlcMel { get; set; }
+            [SpedCampos(16, "PROD_ALC_MEL", "N", int.MaxValue, 2, false, 6)]
+            public decimal? ProdAlcMel { get; set; }
 
             /// <summary>
             ///     Observações
             /// </summary>
-            [SpedCampos(17, "OBS", "C", 0, 0, false, 6)]
+            [SpedCampos(17, "OBS", "C", int.MaxValue, 0, false, 6)]
             public string Obs { get; set; }
 
             /// <summary>
@@ -1011,7 +1011,7 @@ namespace FiscalBr.EFDFiscal
             /// <summary>
             ///     Quantidade de resíduo produzido (toneladas)
             /// </summary>
-            [SpedCampos(19, "QTD_RESIDUO", "N", 0, 2, true, 6)]
+            [SpedCampos(19, "QTD_RESIDUO", "N", int.MaxValue, 2, true, 6)]
             public decimal QtdResiduo { get; set; }
         }
 
