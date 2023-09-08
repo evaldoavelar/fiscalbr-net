@@ -780,7 +780,7 @@ namespace FiscalBr.EFDFiscal
             ///  Nome do profissional
             /// </summary>
             [SpedCampos(6, "NOME", "C", 100, 0, true, 2)]
-            public int Nome { get; set; }
+            public string Nome { get; set; }
 
         }
 
