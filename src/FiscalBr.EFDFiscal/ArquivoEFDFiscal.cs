@@ -1224,9 +1224,9 @@ namespace FiscalBr.EFDFiscal
 
                     regC850.RegC855s.Add((BlocoC.RegistroC855)registro);
                     break;
-                
+
                 case "C857":
-                   var reg855 = BlocoC.RegC001.RegC800s.Last().RegC850s.Last().RegC855s.Last();
+                    var reg855 = BlocoC.RegC001.RegC800s.Last().RegC850s.Last().RegC855s.Last();
 
                     if (reg855.RegC857s == null)
                         reg855.RegC857s = new List<BlocoC.RegistroC857>();
@@ -1261,6 +1261,24 @@ namespace FiscalBr.EFDFiscal
                         regC860.RegC890s = new List<BlocoC.RegistroC890>();
 
                     regC860.RegC890s.Add((BlocoC.RegistroC890)registro);
+                    break;
+
+                case "C895":
+                    regC860 = BlocoC.RegC001.RegC860s.Last();
+
+                    if (regC860.RegC895s == null)
+                        regC860.RegC895s = new List<BlocoC.RegistroC895>();
+
+                    regC860.RegC895s.Add((BlocoC.RegistroC895)registro);
+                    break;
+
+                case "C897":
+                   var regC895 = BlocoC.RegC001.RegC860s.Last().RegC895s.Last();
+
+                    if (regC895.RegC897s == null)
+                        regC895.RegC897s = new List<BlocoC.RegistroC897>();
+
+                    regC895.RegC897s.Add((BlocoC.RegistroC897)registro);
                     break;
 
                 case "C990": BlocoC.RegC990 = (BlocoC.RegistroC990)registro; break;
