@@ -158,7 +158,7 @@ namespace FiscalBr.EFDFiscal
             ///     1- Prestação
             /// </summary>
             [SpedCampos(2, "IND_OPER", "C", 1, 0, true, 2)]
-            public int IndOper { get; set; }
+            public string IndOper { get; set; }
 
             /// <summary>
             ///     Indicador do emitente do documento fiscal:
@@ -168,7 +168,7 @@ namespace FiscalBr.EFDFiscal
             ///     1 - Terceiros;
             /// </summary>
             [SpedCampos(3, "IND_EMIT", "C", 1, 0, true, 2)]
-            public int IndEmit { get; set; }
+            public string IndEmit { get; set; }
 
             /// <summary>
             ///     Código do participante (campo 02 do Registro 0150):
@@ -443,13 +443,13 @@ namespace FiscalBr.EFDFiscal
             ///   Placa de identificacao do veiculo
             /// </summary>
             [SpedCampos(4, "VEIC_ID", "C", 7, 0, false, 2)]
-            public decimal VeicId { get; set; }
+            public string VeicId { get; set; }
 
             /// <summary>
             ///   Sigla da UF da placa do veiculo
             /// </summary>
             [SpedCampos(5, "UF_ID", "C", 2, 0, false, 2)]
-            public decimal UfId { get; set; }
+            public string UfId { get; set; }
         }
 
         /// <summary>
@@ -518,37 +518,37 @@ namespace FiscalBr.EFDFiscal
             ///    Valor líquido do frete 
             /// </summary>
             [SpedCampos(8, "VL_LIQ_FRT", "N", 0, 2, true, 2)]
-            public string VlLiqFrt { get; set; }
+            public decimal VlLiqFrt { get; set; }
 
             /// <summary>
             ///     Soma de valores de Sec/Cat (serviços de coleta/custo adicional de transporte) 
             /// </summary>
             [SpedCampos(9, "VL_SEC_CAT", "N", 0, 2, false, 2)]
-            public string VlSecCat { get; set; }
+            public decimal VlSecCat { get; set; }
 
             /// <summary>
             ///     Soma de valores de despacho
             /// </summary>
             [SpedCampos(10, "VL_DESP", "N", 0, 2, false, 2)]
-            public string VlDesp { get; set; }
+            public decimal VlDesp { get; set; }
 
             /// <summary>
             ///     Soma dos valores de pedágio
             /// </summary>
             [SpedCampos(11, "VL_PEDG", "N", 0, 2, false, 2)]
-            public string VlPedg { get; set; }
+            public decimal VlPedg { get; set; }
 
             /// <summary>
             ///    Outros valores 
             /// </summary>
             [SpedCampos(12, "VL_OUT", "N", 0, 2, false, 2)]
-            public string VlOut { get; set; }
+            public decimal VlOut { get; set; }
 
             /// <summary>
             ///     Valor total do frete
             /// </summary>
             [SpedCampos(13, "VL_FRT", "N", 0, 2, true, 2)]
-            public string VlFrt { get; set; }
+            public decimal VlFrt { get; set; }
 
             /// <summary>
             ///     Sigla da UF da placa do veículo
@@ -623,43 +623,43 @@ namespace FiscalBr.EFDFiscal
             ///  Número da viagem
             /// </summary>
             [SpedCampos(8, "VIAGEM", "N", 0, 0, false, 2)]
-            public string Viagem { get; set; }
+            public decimal Viagem { get; set; }
 
             /// <summary>
             ///  Valor líquido do frete
             /// </summary>
             [SpedCampos(9, "VL_FRT_LIQ", "N", 0, 2, true, 2)]
-            public string VlFrtLiq { get; set; }
+            public decimal VlFrtLiq { get; set; }
 
             /// <summary>
             ///  Valor das despesas portuárias 
             /// </summary>
             [SpedCampos(10, "VL_DESP_PORT", "N", 0, 2, false, 2)]
-            public string VlDespPort { get; set; }
+            public decimal VlDespPort { get; set; }
 
             /// <summary>
             ///  Valor das despesas com carga e descarga 
             /// </summary>
             [SpedCampos(11, "VL_DESP_CAR_DESC", "N", 0, 2, false, 2)]
-            public string VlDespCarDesC { get; set; }
+            public decimal VlDespCarDesC { get; set; }
 
             /// <summary>
             ///   Outros valores
             /// </summary>
             [SpedCampos(12, "VL_OUT", "N", 0, 2, false, 2)]
-            public string VlOut { get; set; }
+            public decimal VlOut { get; set; }
 
             /// <summary>
             ///  Valor brutodo frete
             /// </summary>
             [SpedCampos(13, "VL_FRT_BRT", "N", 0, 2, true, 2)]
-            public string VlFrtBrt { get; set; }
+            public decimal VlFrtBrt { get; set; }
 
             /// <summary>
             /// Valor adicional do frete para renovação da Marinha Mercante
             /// <summary>
             [SpedCampos(14, "VL_FRT_MM", "N", 0, 2, false, 2)]
-            public string VlFrtMm { get; set; }
+            public decimal VlFrtMm { get; set; }
 
         }
 
@@ -717,33 +717,33 @@ namespace FiscalBr.EFDFiscal
             ///   Peso taxado
             /// </summary>
             [SpedCampos(7, "VL_PESO_TX", "N", 0, 2, true, 2)]
-            public string VlPesoTx { get; set; }
+            public decimal VlPesoTx { get; set; }
 
             /// <summary>
             ///   Valor da taxa terrestre
             /// </summary>
             [SpedCampos(8, "VL_TX_TERR", "N", 0, 2, false, 2)]
-            public string VlTxTerr { get; set; }
+            public decimal VlTxTerr { get; set; }
 
 
             /// <summary>
             ///    Valor da taxa de redespacho
             /// </summary>
             [SpedCampos(9, "VL_TX_RED", "N", 0, 2, false, 2)]
-            public string VlTxRed { get; set; }
+            public decimal VlTxRed { get; set; }
 
 
             /// <summary>
             ///    Outros valores
             /// </summary>
             [SpedCampos(10, "VL_OUT", "N", 0, 2, false, 2)]
-            public string VlOut { get; set; }
+            public decimal VlOut { get; set; }
 
             /// <summary>
             ///    Valor da taxa "ad valorem"
             /// </summary>
             [SpedCampos(11, "VL_TX_ADV", "N", 0, 2, false, 2)]
-            public string VlTxAdv { get; set; }
+            public decimal VlTxAdv { get; set; }
 
         }
 
@@ -905,19 +905,19 @@ namespace FiscalBr.EFDFiscal
             ///   Data da emissão do documento fiscal
             /// </summary>
             [SpedCampos(5, "DT_DOC", "N", 8, 0, false, 2)]
-            public string DtDoc { get; set; }
+            public DateTime? DtDoc { get; set; }
 
             /// <summary>
             ///   Valor total do documento fiscal 
             /// </summary>
             [SpedCampos(6, "VL_DOC", "N", 0, 2, false, 2)]
-            public string VlDoc { get; set; }
+            public decimal VlDoc { get; set; }
 
             /// <summary>
             ///   Valor das mercadorias constantes no documento fiscal
             /// </summary>
             [SpedCampos(7, "VL_MERC", "N", 0, 2, false, 2)]
-            public string VlMerc { get; set; }
+            public decimal VlMerc { get; set; }
 
             /// <summary>
             ///  Quantidade de volumes transportados
@@ -930,14 +930,14 @@ namespace FiscalBr.EFDFiscal
             ///   Peso bruto dos volumes transportados (em kg)
             /// </summary>
             [SpedCampos(9, "PESO_BRT", "N", 0, 2, false, 2)]
-            public string PesoBrt { get; set; }
+            public decimal PesoBrt { get; set; }
 
 
             /// <summary>
             ///    Peso líquido dos volumes transportados (em kg)
             /// </summary>
             [SpedCampos(10, "PESO_LIQ", "N", 0, 2, false, 2)]
-            public string PesoLiq { get; set; }
+            public decimal PesoLiq { get; set; }
         }
 
         /// <summary>
@@ -1001,31 +1001,31 @@ namespace FiscalBr.EFDFiscal
             ///   Valor líquido do frete
             /// </summary>
             [SpedCampos(8, "VL_LIQ_FRT", "N", 0, 2, true, 2)]
-            public string VlLinqFrt { get; set; }
+            public decimal VlLinqFrt { get; set; }
 
             /// <summary>
             ///   Valor do gris (gerenciamento de risco)
             /// </summary>
             [SpedCampos(9, "VL_GRIS", "N", 0, 2, false, 2)]
-            public string VlGris { get; set; }
+            public decimal VlGris { get; set; }
 
             /// <summary>
             ///   Somatório dos valores de pedágio
             /// </summary>
             [SpedCampos(10, "VL_PDG", "N", 0, 2, false, 2)]
-            public string VlPdg { get; set; }
+            public decimal VlPdg { get; set; }
 
             /// <summary>
             ///    Outros valores
             /// </summary>
             [SpedCampos(11, "VL_OUT", "N", 0, 2, false, 2)]
-            public string VlOut { get; set; }
+            public decimal VlOut { get; set; }
 
             /// <summary>
             ///    Valor total do frete
             /// </summary>
             [SpedCampos(12, "VL_FRT", "N", 0, 2, true, 2)]
-            public string VlFrt { get; set; }
+            public decimal VlFrt { get; set; }
 
             /// <summary>
             ///    Placa de identificação do veículo
@@ -1144,13 +1144,13 @@ namespace FiscalBr.EFDFiscal
             ///     Data da emissão do documento fiscal
             /// </summary>
             [SpedCampos(16, "DT_DOC", "N", 8, 0, true, 2)]
-            public string DtDoc { get; set; }
+            public DateTime DtDoc { get; set; }
 
             /// <summary>
             ///     Valor total do documento fiscal
             /// </summary>
             [SpedCampos(17, "VL_DOC", "N", 0, 2, true, 2)]
-            public string VlDoc { get; set; }
+            public decimal VlDoc { get; set; }
         }
 
 
@@ -1171,13 +1171,13 @@ namespace FiscalBr.EFDFiscal
             ///     Código da Situação Tributária referente ao ICMS, conforme a Tabela indicada no item 4.3.1
             /// </summary>
             [SpedCampos(2, "CST_ICMS", "N", 3, 0, true, 2)]
-            public int CstIcms { get; set; }
+            public string CstIcms { get; set; }
 
             /// <summary>
             ///     Código Fiscal de Operação e Prestação, conforme a tabela indicada no item 4.2.2
             /// </summary>
             [SpedCampos(3, "CFOP", "N", 4, 0, true, 2)]
-            public int Cfop { get; set; }
+            public string Cfop { get; set; }
 
             /// <summary>
             ///     Alíquota do ICMS
@@ -1362,13 +1362,13 @@ namespace FiscalBr.EFDFiscal
             ///   Alíquota do ICMS
             /// </summary>
             [SpedCampos(9, "ALIQ_ICMS", "N", 6, 2, false, 2)]
-            public string AliqIcms { get; set; }
+            public decimal AliqIcms { get; set; }
 
             /// <summary>
             ///   Data da emissão dos documentos fiscais
             /// </summary>
             [SpedCampos(10, "DT_DOC", "N", 8, 0, true, 2)]
-            public string DtDoc { get; set; }
+            public DateTime? DtDoc { get; set; }
 
             /// <summary>
             ///   Valor total acumulado das operações correspondentes à combinação de CST_ICMS, CFOP
@@ -1376,43 +1376,43 @@ namespace FiscalBr.EFDFiscal
             ///   e alíquota do ICMS, incluídas as despesas acessórias e acréscimos. 
             /// </summary>
             [SpedCampos(11, "VL_OPR", "N", 0, 2, true, 2)]
-            public string VlOpr { get; set; }
+            public decimal VlOpr { get; set; }
 
             /// <summary>
             ///   Valor total dos descontos
             /// </summary>
             [SpedCampos(12, "VL_DESC", "N", 0, 2, false, 2)]
-            public string VlDesc { get; set; }
+            public decimal VlDesc { get; set; }
 
             /// <summary>
             ///   Valor total da prestação de serviço
             /// </summary>
             [SpedCampos(13, "VL_SERV", "N", 0, 2, true, 2)]
-            public string VlServ { get; set; }
+            public decimal VlServ { get; set; }
 
             /// <summary>
             ///   Valor de seguro
             /// </summary>
             [SpedCampos(14, "VL_SEG", "N", 0, 2, false, 2)]
-            public string VlSeg { get; set; }
+            public decimal VlSeg { get; set; }
 
             /// <summary>
             ///   Valor de outras despesas
             /// </summary>
             [SpedCampos(15, "VL_OUT_DESP", "N", 0, 2, false, 2)]
-            public string VlOutDesp { get; set; }
+            public decimal VlOutDesp { get; set; }
 
             /// <summary>
             ///   Valor total da base de cálculo do ICMS
             /// </summary>
             [SpedCampos(16, "VL_BC_ICMS", "N", 0, 2, true, 2)]
-            public string VlBcIcms { get; set; }
+            public decimal VlBcIcms { get; set; }
 
             /// <summary>
             ///   Valor total do ICMS
             /// </summary>
             [SpedCampos(17, "VL_ICMS", "N", 0, 2, true, 2)]
-            public string VlIcms { get; set; }
+            public decimal VlIcms { get; set; }
 
             /// <summary>
             ///   Valor não tributado em função da redução da base de cálculo do ICMS, 
@@ -1420,7 +1420,7 @@ namespace FiscalBr.EFDFiscal
             ///   referente à combinação de CST_ICMS, CFOP e alíquota do ICMS.
             /// </summary>
             [SpedCampos(18, "VL_RED_BC", "N", 0, 2, true, 2)]
-            public string VlRedBc { get; set; }
+            public decimal VlRedBc { get; set; }
 
             /// <summary>
             ///   Código da observação do lançamento fiscal (campo 02 do Registro 0460)
@@ -1477,19 +1477,19 @@ namespace FiscalBr.EFDFiscal
             ///    Valor total da prestação de serviço
             /// </summary>
             [SpedCampos(3, "VL_SERV", "N", 0, 2, true, 2)]
-            public string VlServ { get; set; }
+            public decimal VlServ { get; set; }
 
             /// <summary>
             ///    Valor total da base de cálculo do ICMS
             /// </summary>
             [SpedCampos(4, "VL_BC_ICMS", "N", 0, 2, false, 2)]
-            public string VlBcIcms { get; set; }
+            public decimal VlBcIcms { get; set; }
 
             /// <summary>
             ///    Valor total do ICMS
             /// </summary>
             [SpedCampos(5, "VL_ICMS", "N", 0, 2, false, 2)]
-            public string VlIcms { get; set; }
+            public decimal VlIcms { get; set; }
         }
 
         /// <summary>
@@ -1543,7 +1543,7 @@ namespace FiscalBr.EFDFiscal
             ///   Data do movimento a que se refere a Redução Z
             /// </summary>
             [SpedCampos(2, "DT_DOC", "N", 8, 0, true, 2)]
-            public string DtDoc { get; set; }
+            public DateTime? DtDoc { get; set; }
 
             /// <summary>
             ///   Posição do Contador de Reinício de Operação
@@ -1567,13 +1567,13 @@ namespace FiscalBr.EFDFiscal
             ///   Valor do Grande Total final
             /// </summary>
             [SpedCampos(6, "GT_FIN", "N", 0, 2, true, 2)]
-            public string GtFin { get; set; }
+            public decimal GtFin { get; set; }
 
             /// <summary>
             ///   Valor da venda bruta
             /// </summary>
             [SpedCampos(7, "VL_BRT", "N", 0, 2, true, 2)]
-            public string VlBrt { get; set; }
+            public decimal VlBrt { get; set; }
 
             public RegistroD360 RegD360s { get; set; }
             public List<RegistroD365> RegD365s { get; set; }
@@ -1594,13 +1594,13 @@ namespace FiscalBr.EFDFiscal
             ///   Valor total do PIS
             /// </summary>
             [SpedCampos(2, "VL_PIS", "N", 0, 2, false, 2)]
-            public string VlPis { get; set; }
+            public decimal VlPis { get; set; }
 
             /// <summary>
             ///   Valor total da COFINS
             /// </summary>
             [SpedCampos(3, "VL_COFINS", "N", 0, 2, false, 2)]
-            public string VlCofins { get; set; }
+            public decimal VlCofins { get; set; }
 
         }
 
@@ -1624,7 +1624,7 @@ namespace FiscalBr.EFDFiscal
             ///   Valor acumulado no totalizador, relativo à respectiva Redução Z.
             /// </summary>
             [SpedCampos(3, "VLR_ACUM_TOT", "N", 0, 2, true, 2)]
-            public string VlrAcumTot { get; set; }
+            public decimal VlrAcumTot { get; set; }
 
             /// <summary>
             ///   Número do totalizador quando ocorrer mais de uma situação com a mesma carga tributária efetiva.
@@ -1663,7 +1663,7 @@ namespace FiscalBr.EFDFiscal
             ///   Valor total da prestação de serviço
             /// </summary>
             [SpedCampos(3, "VL_SERV", "N", 0, 2, true, 2)]
-            public string VlServ { get; set; }
+            public decimal VlServ { get; set; }
 
             /// <summary>
             ///   Quantidade de bilhetes emitidos
@@ -1675,13 +1675,13 @@ namespace FiscalBr.EFDFiscal
             ///   Valor total da base de cálculo do ICMS
             /// </summary>
             [SpedCampos(5, "VL_BC_ICMS", "N", 0, 2, false, 2)]
-            public string VlBcIcms { get; set; }
+            public decimal VlBcIcms { get; set; }
 
             /// <summary>
             ///   Valor total do ICMS
             /// </summary>
             [SpedCampos(6, "VL_ICMS", "N", 0, 2, false, 2)]
-            public string VlIcms { get; set; }
+            public decimal VlIcms { get; set; }
 
         }
 
@@ -1711,7 +1711,7 @@ namespace FiscalBr.EFDFiscal
             ///   Alíquota do ICMS
             /// </summary>
             [SpedCampos(4, "ALIQ_ICMS", "N", 6, 2, false, 2)]
-            public string AliqIcms { get; set; }
+            public decimal AliqIcms { get; set; }
 
             /// <summary>
             ///   Valor da operação correspondente à combinação de CST_ICMS, CFOP, 
@@ -1719,37 +1719,37 @@ namespace FiscalBr.EFDFiscal
             ///   e alíquota do ICMS, incluídas as despesas acessórias e acréscimos 
             /// </summary>
             [SpedCampos(5, "VL_OPR", "N", 0, 2, true, 2)]
-            public string VlOpr { get; set; }
+            public decimal VlOpr { get; set; }
 
             /// <summary>
             ///   Valor da base de cálculo do ISSQN
             /// </summary>
             [SpedCampos(6, "VL_BC_ISSQN", "N", 0, 2, false, 2)]
-            public string VlBcIssqn { get; set; }
+            public decimal VlBcIssqn { get; set; }
 
             /// <summary>
             ///   Alíquota do ISSQN
             /// </summary>
             [SpedCampos(7, "ALIQ_ISSQN", "N", 6, 2, false, 2)]
-            public string AliqIssqn { get; set; }
+            public decimal AliqIssqn { get; set; }
 
             /// <summary>
             ///   Valor do ISSQN
             /// </summary>
             [SpedCampos(8, "VL_ISSQN", "N", 0, 2, false, 2)]
-            public string VlIssqn { get; set; }
+            public decimal VlIssqn { get; set; }
 
             /// <summary>
             ///   Base de cálculo do ICMS acumulada relativa à alíquota informada
             /// </summary>
             [SpedCampos(9, "VL_BC_ICMS", "N", 0, 2, true, 2)]
-            public string VlBcIcms { get; set; }
+            public decimal VlBcIcms { get; set; }
 
             /// <summary>
             ///   Valor do ICMS acumulado relativo à alíquota informada
             /// </summary>
             [SpedCampos(10, "VL_ICMS", "N", 0, 2, true, 2)]
-            public string VlIcms { get; set; }
+            public decimal VlIcms { get; set; }
 
             /// <summary>
             ///   Código da observação do lançamento fiscal (campo 02 do Registro 0460)
@@ -1808,49 +1808,49 @@ namespace FiscalBr.EFDFiscal
             ///   Data da emissão do documento fiscal
             /// </summary>
             [SpedCampos(8, "DT_DOC", "N", 8, 0, true, 2)]
-            public string DtDoc { get; set; }
+            public DateTime DtDoc { get; set; }
 
             /// <summary>
             ///   Valor total do documento fiscal
             /// </summary>
             [SpedCampos(9, "VL_DOC", "N", 0, 2, true, 2)]
-            public string VlDoc { get; set; }
+            public decimal VlDoc { get; set; }
 
             /// <summary>
             ///   Valor acumulado dos descontos
             /// </summary>
             [SpedCampos(10, "VL_DESC", "N", 0, 2, false, 2)]
-            public string VlDesc { get; set; }
+            public decimal VlDesc { get; set; }
 
             /// <summary>
             ///   Valor acumulado da prestação de serviço
             /// </summary>
             [SpedCampos(11, "VL_SERV", "N", 0, 2, true, 2)]
-            public string VlServ { get; set; }
+            public decimal VlServ { get; set; }
 
             /// <summary>
             ///   Valor total da base de cálculo do ICMS
             /// </summary>
             [SpedCampos(12, "VL_BC_ICMS", "N", 0, 2, false, 2)]
-            public string VlBcIcms { get; set; }
+            public decimal VlBcIcms { get; set; }
 
             /// <summary>
             ///   Valor total do ICMS
             /// </summary>
             [SpedCampos(13, "VL_ICMS", "N", 0, 2, false, 2)]
-            public string VlIcms { get; set; }
+            public decimal VlIcms { get; set; }
 
             /// <summary>
             ///   Valor do PIS
             /// </summary>
             [SpedCampos(14, "VL_PIS", "N", 0, 2, false, 2)]
-            public string VlPis { get; set; }
+            public decimal VlPis { get; set; }
 
             /// <summary>
             ///   Valor da COFINS
             /// </summary>
             [SpedCampos(15, "VL_COFINS", "N", 0, 2, false, 2)]
-            public string VlOfins { get; set; }
+            public decimal VlOfins { get; set; }
 
             /// <summary>
             ///    Código da conta analítica contábil debitada/creditada
@@ -1906,7 +1906,7 @@ namespace FiscalBr.EFDFiscal
             ///   Data da emissão dos documentos fiscais
             /// </summary>
             [SpedCampos(7, "DT_DOC", "N", 8, 0, true, 2)]
-            public string DtDoc { get; set; }
+            public DateTime? DtDoc { get; set; }
 
             /// <summary>
             ///   Código da Situação Tributária, conforme a Tabela indicada no item 4.3.1
@@ -1924,7 +1924,7 @@ namespace FiscalBr.EFDFiscal
             ///   Alíquota do ICMS
             /// </summary>
             [SpedCampos(10, "ALIQ_ICMS", "N", 6, 2, false, 2)]
-            public string AliqIcms { get; set; }
+            public decimal AliqIcms { get; set; }
 
             /// <summary>
             ///   Valor total acumulado das operações correspondentes à combinação de CST_ICMS, CFOP
@@ -1932,31 +1932,31 @@ namespace FiscalBr.EFDFiscal
             ///   e alíquota do ICMS,incluídas as despesas acessórias e acréscimos. 
             /// </summary>
             [SpedCampos(11, "VL_OPR", "N", 0, 2, true, 2)]
-            public string VlOpr { get; set; }
+            public decimal VlOpr { get; set; }
 
             /// <summary>
             ///   Valor acumulado dos descontos
             /// </summary>
             [SpedCampos(12, "VL_DESC", "N", 0, 2, false, 2)]
-            public string VlDesc { get; set; }
+            public decimal VlDesc { get; set; }
 
             /// <summary>
             ///   Valor acumulado da prestação de serviço
             /// </summary>
             [SpedCampos(13, "VL_SERV", "N", 0, 2, true, 2)]
-            public string VlServ { get; set; }
+            public decimal VlServ { get; set; }
 
             /// <summary>
             ///   Valor acumulado da base de cálculo do ICMS
             /// </summary>
             [SpedCampos(14, "VL_BC_ICMS", "N", 0, 2, true, 2)]
-            public string VlBcIcms { get; set; }
+            public decimal VlBcIcms { get; set; }
 
             /// <summary>
             ///   Valor acumulado do ICMS
             /// </summary>
             [SpedCampos(15, "VL_ICMS", "N", 0, 2, true, 2)]
-            public string VlIcms { get; set; }
+            public decimal VlIcms { get; set; }
 
             public List<RegistroD411> RegD411s { get; set; }
 
@@ -2000,19 +2000,19 @@ namespace FiscalBr.EFDFiscal
             ///   Valor total da prestação de serviço
             /// </summary>
             [SpedCampos(3, "VL_SERV", "N", 0, 2, true, 2)]
-            public string VlServ { get; set; }
+            public decimal VlServ { get; set; }
 
             /// <summary>
             ///   Valor total da base de cálculo do ICMS
             /// </summary>
             [SpedCampos(4, "VL_BC_ICMS", "N", 0, 2, true, 2)]
-            public string VlBcIcms { get; set; }
+            public decimal VlBcIcms { get; set; }
 
             /// <summary>
             ///    Valor total do ICMS
             /// </summary>
             [SpedCampos(5, "VL_ICMS", "N", 0, 2, true, 2)]
-            public string VlIcms { get; set; }
+            public decimal VlIcms { get; set; }
 
         }
 
@@ -2243,13 +2243,13 @@ namespace FiscalBr.EFDFiscal
             ///     Valor do item
             /// </summary>
             [SpedCampos(7, "VL_ITEM", "N", 0, 2, true, 2)]
-            public decimal Vl_Item { get; set; }
+            public decimal VlItem { get; set; }
 
             /// <summary>
             ///     Valor total do desconto
             /// </summary>
             [SpedCampos(8, "VL_DESC", "N", 0, 2, false, 2)]
-            public decimal Vl_Desc { get; set; }
+            public decimal VlDesc { get; set; }
 
             /// <summary>
             ///     Código da Situação Tributária, conforme a Tabela indicada no item 4.3.1
@@ -2386,7 +2386,7 @@ namespace FiscalBr.EFDFiscal
             ///     Período fiscal da prestação do serviço (MMAAAA)
             /// </summary>
             [SpedCampos(5, "PER_FISCAL", "MA", 6, 0, true, 2)]
-            public DateTime PerFiscal { get; set; }
+            public string PerFiscal { get; set; }
 
             /// <summary>
             ///     Código de área do terminal faturado
@@ -2638,13 +2638,13 @@ namespace FiscalBr.EFDFiscal
             ///    Valor acumulado do item
             /// </summary>
             [SpedCampos(6, "VL_ITEM", "N", 0, 2, true, 2)]
-            public decimal Vl_Item { get; set; }
+            public decimal VlItem { get; set; }
 
             /// <summary>
             ///     Valor acumulado dos descontos
             /// </summary>
             [SpedCampos(7, "VL_DESC", "N", 0, 2, false, 2)]
-            public decimal Vl_Desc { get; set; }
+            public decimal VlDesc { get; set; }
 
             /// <summary>
             ///     Código da Situação Tributária, conforme a Tabela indicada no item 4.3.1
@@ -2704,13 +2704,13 @@ namespace FiscalBr.EFDFiscal
             ///     Valor acumulado da COFINS
             /// </summary>
             [SpedCampos(17, "VL_COFINS", "N", 0, 2, false, 2)]
-            public string VlCofins { get; set; }
+            public decimal VlCofins { get; set; }
 
             /// <summary>
             ///    Código da conta analítica contábil debitada/creditada 
             /// </summary>
             [SpedCampos(18, "COD_CTA", "C", 0, 0, false, 2)]
-            public decimal CodCta { get; set; }
+            public string CodCta { get; set; }
         }
 
         /// <summary>
@@ -2784,7 +2784,7 @@ namespace FiscalBr.EFDFiscal
             /// Código  da  observação  do  lançamento  fiscal (campo 02 do Registro 0460)
             /// </summary>
             [SpedCampos(11, "COD_OBS", "C", 6, 0, false, 2)]
-            public int CodObs { get; set; }
+            public string CodObs { get; set; }
         }
 
         /// <summary>
@@ -2829,13 +2829,13 @@ namespace FiscalBr.EFDFiscal
             ///  Data de emissão inicial dos documentos / Data inicial de vencimento da fatura
             /// </summary>
             [SpedCampos(6, "DT_DOC_INI", "N", 8, 0, true, 2)]
-            public string DtDocIni { get; set; }
+            public DateTime DtDocIni { get; set; }
 
             /// <summary>
             ///  Data de emissão final dos documentos / Data final do vencimento da fatura
             /// </summary>
             [SpedCampos(7, "DT_DOC_FIN", "N", 8, 0, true, 2)]
-            public string DtDocFin { get; set; }
+            public DateTime DtDocFin { get; set; }
 
             /// <summary>
             ///  Nome do arquivo Mestre de Documento Fiscal
@@ -2923,7 +2923,7 @@ namespace FiscalBr.EFDFiscal
             /// Código  da  observação  do  lançamento  fiscal (campo 02 do Registro 0460)
             /// </summary>
             [SpedCampos(11, "COD_OBS", "C", 6, 0, false, 2)]
-            public int CodObs { get; set; }
+            public string CodObs { get; set; }
 
             public List<RegistroD697> RegD697s { get; set; }
         }
@@ -2945,7 +2945,7 @@ namespace FiscalBr.EFDFiscal
             ///    Sigla da unidade da federação
             /// </summary>
             [SpedCampos(2, "Uf", "C", 2, 0, true, 2)]
-            public decimal Uf { get; set; }
+            public string Uf { get; set; }
 
             // <summary>
             ///    Valor da base de cálculo do ICMS
@@ -2980,7 +2980,7 @@ namespace FiscalBr.EFDFiscal
             ///     1- Saiía
             /// </summary>
             [SpedCampos(2, "IND_OPER", "C", 1, 0, true, 17)]
-            public int IndOper { get; set; }
+            public string IndOper { get; set; }
 
             /// <summary>
             ///     Indicador do emitente do documento fiscal:
@@ -2988,7 +2988,7 @@ namespace FiscalBr.EFDFiscal
             ///     1 - Terceiros;
             /// </summary>
             [SpedCampos(3, "IND_EMIT", "C", 1, 0, true, 17)]
-            public int IndEmit { get; set; }
+            public string IndEmit { get; set; }
 
             /// <summary>
             ///     Código do participante (campo 02 do Registro 0150) do prestador, no caso de entradas.

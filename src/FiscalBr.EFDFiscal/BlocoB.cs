@@ -247,13 +247,13 @@ namespace FiscalBr.EFDFiscal
             ///    Código do modelo do documento fiscal, conforme a Tabela 4.1.3
             /// </summary>
             [SpedCampos(2, "COD_MOD", "C", 2, 0, true, 2)]
-            public int CodMod { get; set; }
+            public string CodMod { get; set; }
 
             /// <summary>
             ///  Série do documento fiscal
             /// </summary>
             [SpedCampos(3, "SER", "C", 3, 0, false, 2)]
-            public int Ser { get; set; }
+            public string Ser { get; set; }
 
             /// <summary>
             ///   Número do primeiro documento fiscal emitido no dia

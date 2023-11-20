@@ -69,7 +69,7 @@ namespace FiscalBr.EFDFiscal
             ///     05 – Por determinação dos fiscos.
             /// </summary>
             [SpedCampos(4, "MOT_INV", "C", 2, 0, true, 6)]
-            public int MotInv { get; set; }
+            public string MotInv { get; set; }
 
             public List<RegistroH010> RegH010s { get; set; }
         }
@@ -201,25 +201,25 @@ namespace FiscalBr.EFDFiscal
             ///     Valor médio unitário do ICMS OP
             /// </summary>
             [SpedCampos(2, "VL_ICMS_OP", "N", 0, 6, true, 2)]
-            public string VlIcmsOp { get; set; }
+            public decimal VlIcmsOp { get; set; }
 
             /// <summary>
             ///     Valor médio unitário da base de cálculo do ICMS ST
             /// </summary>
             [SpedCampos(3, "VL_BC_ICMS_ST", "N", 0, 6, true, 2)]
-            public string VlBcIcmsSt { get; set; }
+            public decimal VlBcIcmsSt { get; set; }
 
             /// <summary>
             ///    Valor médio unitário do ICMS ST
             /// </summary>
             [SpedCampos(4, "VL_ICMS_ST", "N", 0, 6, true, 2)]
-            public string VlIcmsSt { get; set; }
+            public decimal VlIcmsSt { get; set; }
 
             /// <summary>
             ///    Valor médio unitário do FCP
             /// </summary>
             [SpedCampos(5, "VL_FCP", "N", 0, 6, true, 2)]
-            public string VlFcp { get; set; }
+            public decimal VlFcp { get; set; }
         }
 
         /// <summary>

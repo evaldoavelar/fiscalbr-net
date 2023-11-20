@@ -278,7 +278,7 @@ namespace FiscalBr.EFDFiscal
             ///     Atualização: 22/08/2017
             /// </summary>
             [SpedCampos(6, "QTD_DEST", "N", 3, 0, false, 10)]
-            public string QtdDest { get; set; }
+            public decimal QtdDest { get; set; }
         }
 
         /// <summary>
@@ -483,7 +483,7 @@ namespace FiscalBr.EFDFiscal
             ///     Data de retorno ao estoque (entrada) 
             /// </summary>
             [SpedCampos(6, "DT_RET", "N", 8, 0, false, 11)]
-            public DateTime? DtReg { get; set; }
+            public DateTime? DtRet { get; set; }
 
             /// <summary>
             ///    Quantidade de retorno ao estoque (entrada)

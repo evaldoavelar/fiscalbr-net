@@ -243,7 +243,7 @@ namespace FiscalBr.EFDFiscal
             ///     9 - Outros
             /// </remarks>
             [SpedCampos(4, "IND_PROC", "C", 1, 0, false, 2)]
-            public int? IndProc { get; set; }
+            public string IndProc { get; set; }
 
             /// <summary>
             ///     Descrição resumida do processo que embasou o lançamento
@@ -414,7 +414,7 @@ namespace FiscalBr.EFDFiscal
             ///     9- Outros
             /// </summary>
             [SpedCampos(7, "IND_PROC", "C", 1, 0, false, 2)]
-            public int? IndProc { get; set; }
+            public string IndProc { get; set; }
 
             /// <summary>
             ///     Descrição resumida do processo que embasou o lançamento
@@ -432,7 +432,7 @@ namespace FiscalBr.EFDFiscal
             ///     Informe o mês de referência no formato "mmaaaa"
             /// </summary>
             [SpedCampos(10, "MES_REF", "MA", 6, 0, true, 4)]
-            public DateTime MesRef { get; set; }
+            public string MesRef { get; set; }
         }
 
         /// <summary>
@@ -490,7 +490,7 @@ namespace FiscalBr.EFDFiscal
             ///     1 - Com operações de ST
             /// </remarks>
             [SpedCampos(2, "IND_MOV_ST", "C", 1, 0, true, 2)]
-            public int IndMovSt { get; set; }
+            public string IndMovSt { get; set; }
 
             /// <summary>
             ///     Valor do "Saldo credor do período anterior - Substituição Tributária"
@@ -958,7 +958,7 @@ namespace FiscalBr.EFDFiscal
             ///     Valor total das deduções "FCP"
             /// </summary>
             [SpedCampos(19, "VL_DEDUÇÕES_FCP", "N", 0, 2, true, 2)]
-            public decimal VlDeduoesFcp { get; set; }
+            public decimal VlDeducoesFcp { get; set; }
 
             /// <summary>
             ///     Valor recolhido ou a recolher referente ao FCP (18-19)
