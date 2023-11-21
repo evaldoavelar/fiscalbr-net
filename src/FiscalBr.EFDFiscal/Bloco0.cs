@@ -829,7 +829,7 @@ namespace FiscalBr.EFDFiscal
             ///     Identificação do tipo de mercadoria: 1 = bem; 2 = componente.
             /// </summary>
             [SpedCampos(3, "IDENT_MERC", "C", 1, 0, true, 4)]
-            public int IdentMerc { get; set; }
+            public string IdentMerc { get; set; }
 
             /// <summary>
             ///     Descrição do bem ou componente (modelo, marca e outras
