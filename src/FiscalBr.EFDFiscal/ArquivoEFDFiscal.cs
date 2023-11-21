@@ -216,6 +216,15 @@ namespace FiscalBr.EFDFiscal
 
                     reg0200.Reg0220s.Add((Bloco0.Registro0220)registro);
                     break;
+                    
+                case "0221":
+                    reg0200 = Bloco0.Reg0001.Reg0200s.Last();
+
+                    if (reg0200.Reg0221s == null)
+                        reg0200.Reg0221s = new List<Bloco0.Registro0221>();
+
+                    reg0200.Reg0221s.Add((Bloco0.Registro0221)registro);
+                    break;
 
                 case "0300":
                     if (Bloco0.Reg0001.Reg0300s == null)
@@ -1273,7 +1282,7 @@ namespace FiscalBr.EFDFiscal
                     break;
 
                 case "C897":
-                   var regC895 = BlocoC.RegC001.RegC860s.Last().RegC895s.Last();
+                    var regC895 = BlocoC.RegC001.RegC860s.Last().RegC895s.Last();
 
                     if (regC895.RegC897s == null)
                         regC895.RegC897s = new List<BlocoC.RegistroC897>();
